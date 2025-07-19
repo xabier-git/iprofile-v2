@@ -1,0 +1,22 @@
+<h3>Editar / Eliminar Perfiles</h3>
+<ul>
+  <li *ngFor="let profile of profiles">
+    <div *ngIf="editingId !== profile._id">
+      <span>{{ profile.nickname }} - {{ profile.nombre }} {{ profile.apellido }}</span>
+      <span>{{ profile.codigoSituacionSentimental }} - {{ profile.equipoActual }}</span>
+      <span>ID: {{ profile._id }}</span>
+      
+      <button (click)="enableEdit(profile)">Editar</button>
+      <button (click)="deleteProfile(profile._id!)">Eliminar</button>
+    </div>
+    <div *ngIf="editingId === profile._id">
+      <input [(ngModel)]="editNickname" placeholder="Nickname" required>
+      <input [(ngModel)]="editNombre" placeholder="Nombre" required>
+      <input [(ngModel)]="editApellido" placeholder="Apellido" required>
+      <input [(ngModel)]="editCodigoSituacionSentimental" placeholder="Código Situación Sentimental" required>
+      <input [(ngModel)]="editEquipoActual" placeholder="Equipo Actual" required>
+      <button (click)="updateProfile()">Guardar</button>
+      <button (click)="cancelEdit()">Cancelar</button>
+    </div>
+  </li>
+</ul>

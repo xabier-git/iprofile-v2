@@ -1,0 +1,10 @@
+<h3>Agregar Perfil</h3>
+
+<form (ngSubmit)="addProfile()">
+  <input [(ngModel)]="profile.nickname" name="nickname" placeholder="Nickname" required>
+  <input [(ngModel)]="profile.nombre" name="nombre" placeholder="Nombre" required>
+  <input [(ngModel)]="profile.apellido" name="apellido" placeholder="Apellido" required>
+  <input [(ngModel)]="profile.codigoSituacionSentimental" name="codigoSituacionSentimental" placeholder="Código Situación Sentimental" required>
+  <input [(ngModel)]="profile.equipoActual" name="equipoActual" placeholder="Equipo Actual" required>
+  <button type="submit">Agregar Perfil</button>
+</form>
