@@ -1,0 +1,21 @@
+# Node.js (aplica a frontend y backend)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Builds
+dist/
+build/
+out/
+
+# Logs
+*.log
+logs/
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
