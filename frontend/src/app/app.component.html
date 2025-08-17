@@ -1,4 +1,23 @@
-<h1>Gestión de Autos</h1>
-<app-profile-add></app-profile-add>
-<hr>
-<app-profile-list></app-profile-list>
+<div class="dashboard-container">
+  <header class="dashboard-header">
+    <h1 class="dashboard-title">Gestión de Perfiles</h1>
+    <nav class="dashboard-nav">
+      <a routerLink="/home" class="nav-link">Inicio</a>
+      <ng-container *ngIf="isAuthenticated(); else loggedOut">
+        <a routerLink="/profiles/add" class="nav-link">Nuevo Perfil</a>
+        <a routerLink="/profiles" class="nav-link">Lista de Perfiles</a>
+        <span class="user-info">Bienvenido, {{ username }}</span>
+        <button (click)="logout()" class="btn btn-danger btn-logout">Logout</button>
+      </ng-container>
+      <ng-template #loggedOut>
+        <div class="auth-links-top">
+          <a routerLink="/login" class="nav-link">Login</a>
+          <a routerLink="/register" class="nav-link">Registro</a>
+        </div>
+      </ng-template>
+    </nav>
+  </header>
+  <main class="dashboard-main">
+    <router-outlet></router-outlet>
+  </main>
+</div>

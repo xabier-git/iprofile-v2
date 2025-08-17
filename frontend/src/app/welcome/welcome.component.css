@@ -1,0 +1,40 @@
+.welcome-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+}
+
+.welcome-card {
+  background: #fff;
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.welcome-card h1 {
+  margin-bottom: 1rem;
+  color: #3b82f6;
+}
+
+.welcome-card p {
+  margin-bottom: 2rem;
+  color: #374151;
+}
+
+.welcome-btn {
+  background: #3b82f6;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+
+.welcome-btn:hover {
+  background: #2563eb;
+}

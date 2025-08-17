@@ -1,0 +1,9 @@
+<div class="dialog-backdrop" *ngIf="visible">
+  <div class="dialog-content">
+    <h2 class="dialog-title">Error</h2>
+    <p class="dialog-message">{{ message }}</p>
+    <div class="dialog-actions">
+      <button (click)="closeDialog()" class="close-btn">Cerrar</button>
+    </div>
+  </div>
+</div>

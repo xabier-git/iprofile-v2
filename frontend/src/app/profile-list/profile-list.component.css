@@ -1,0 +1,70 @@
+.list-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Cambia min-height por height */
+  background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+}
+
+.list-card {
+  background: #fff;
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  text-align: center;
+  width: 100%;
+  max-width: 650px; /* Reduce el ancho máximo */
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.profile-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  border: 1.5px solid #3b82f6; /* Borde azul suave */
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.profile-table th, .profile-table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: center;
+}
+
+.profile-table th {
+  background: #3b82f6;
+  color: #fff;
+  font-weight: 600;
+}
+
+.profile-table tr:last-child td {
+  border-bottom: none;
+}
+
+.profile-btn {
+  background: #3b82f6;
+  color: #fff;
+  border: none;
+  padding: 0.3rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+}
+
+.profile-btn:hover {
+  background: #2563eb;
+}
+
+.profile-btn.delete {
+  background: #ef4444;
+}
+
+.profile-btn.delete:hover {
+  background: #b91c1c;
+}

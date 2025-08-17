@@ -1,0 +1,57 @@
+/* Estilo general del cuadro de diálogo */
+.dialog-content {
+  text-align: center;
+  padding: 20px;
+  background-color: #fefefe;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  min-width: 300px;
+  max-width: 90vw;
+}
+
+/* Título del cuadro de diálogo */
+.dialog-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #f44336; /* Rojo para resaltar el error */
+  margin-bottom: 10px;
+}
+
+/* Mensaje del cuadro de diálogo */
+.dialog-message {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Botón de acciones */
+.dialog-actions button {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 24px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: background 0.2s;
+}
+.dialog-actions button:hover {
+  background: #d32f2f;
+}
+
+/* Fondo semitransparente para el modal */
+.dialog-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}

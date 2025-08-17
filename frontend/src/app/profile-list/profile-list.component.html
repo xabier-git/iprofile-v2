@@ -1,0 +1,46 @@
+<div class="list-container">
+  <div class="list-card">
+    <h1>Listado de Perfiles</h1>
+    <p>Consulta y gestiona los perfiles de futbolistas mujeres destacadas.</p>
+    <div class="table-responsive">
+      <table class="profile-table">
+        <thead>
+          <tr>
+            <th>Nickname</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Situación Sentimental</th>
+            <th>Equipo Actual</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let profile of profiles">
+            <ng-container *ngIf="editingId !== profile._id; else editRow">
+              <td>{{ profile.nickname }}</td>
+              <td>{{ profile.nombre }}</td>
+              <td>{{ profile.apellido }}</td>
+              <td>{{ profile.codigoSituacionSentimental }}</td>
+              <td>{{ profile.equipoActual }}</td>
+              <td>
+                <button (click)="enableEdit(profile)" class="profile-btn">Editar</button>
+                <button (click)="deleteProfile(profile._id!)" class="profile-btn delete">Eliminar</button>
+              </td>
+            </ng-container>
+            <ng-template #editRow>
+              <td><input [(ngModel)]="editNickname" placeholder="Nickname" required></td>
+              <td><input [(ngModel)]="editNombre" placeholder="Nombre" required></td>
+              <td><input [(ngModel)]="editApellido" placeholder="Apellido" required></td>
+              <td><input [(ngModel)]="editCodigoSituacionSentimental" placeholder="Situación Sentimental" required></td>
+              <td><input [(ngModel)]="editEquipoActual" placeholder="Equipo Actual" required></td>
+              <td>
+                <button (click)="updateProfile()" class="profile-btn">Guardar</button>
+                <button (click)="cancelEdit()" class="profile-btn delete">Cancelar</button>
+              </td>
+            </ng-template>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

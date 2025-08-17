@@ -1,0 +1,28 @@
+<div class="add-container">
+  <div class="add-card">
+    <h3 class="add-title">Agregar Perfil</h3>
+    <form (ngSubmit)="addProfile()">
+      <div class="form-field">
+        <label for="nickname">Nickname</label>
+        <input id="nickname" [(ngModel)]="profile.nickname" name="nickname" placeholder="Nickname" required class="input-field">
+      </div>
+      <div class="form-field">
+        <label for="nombre">Nombre</label>
+        <input id="nombre" [(ngModel)]="profile.nombre" name="nombre" placeholder="Nombre" required class="input-field">
+      </div>
+      <div class="form-field">
+        <label for="apellido">Apellido</label>
+        <input id="apellido" [(ngModel)]="profile.apellido" name="apellido" placeholder="Apellido" required class="input-field">
+      </div>
+      <div class="form-field">
+        <label for="codigoSituacionSentimental">Situación Sentimental</label>
+        <input id="codigoSituacionSentimental" [(ngModel)]="profile.codigoSituacionSentimental" name="codigoSituacionSentimental" placeholder="Código Situación Sentimental" required class="input-field">
+      </div>
+      <div class="form-field">
+        <label for="equipoActual">Equipo Actual</label>
+        <input id="equipoActual" [(ngModel)]="profile.equipoActual" name="equipoActual" placeholder="Equipo Actual" required class="input-field">
+      </div>
+      <button type="submit" class="add-btn">Agregar Perfil</button>
+    </form>
+  </div>
+</div>
